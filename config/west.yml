@@ -2,15 +2,19 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: Dist16384
-      url-base: https://github.com/Dist16384
+    - name: puku0x
+      url-base: https://github.com/puku0x
+
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+
     - name: zmk-pmw3610-driver
-      remote: Dist16384
+      remote: puku0x
       revision: main
+      path: zmk-pmw3610-driver
+
   self:
     path: config
